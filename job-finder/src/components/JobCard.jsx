@@ -1,19 +1,19 @@
 function JobCard({ job }) {
   return (
-    <div
-      style={{
-        border: "1px solid #ddd",
-        padding: "15px",
-        borderRadius: "8px",
-        marginBottom: "10px",
-      }}
-    >
-      <h3>{job.title}</h3>
-      <p><strong>Company:</strong> {job.company}</p>
-      <p><strong>Location:</strong> {job.location}</p>
-      <a href="#" style={{ color: "blue" }}>
-        View Details
-      </a>
+    <div className="bg-gray-800 p-5 rounded-lg mb-4 hover:bg-gray-700 transition">
+      <h3 className="text-xl font-semibold mb-2">{job.title}</h3>
+
+      <p className="text-gray-300">
+        <span className="font-medium">Company:</span> {job.company}
+      </p>
+
+      <p className="text-gray-300 mb-3">
+        <span className="font-medium">Location:</span> {job.location}
+      </p>
+
+      <button className="text-blue-400 hover:underline">
+        View Details →
+      </button>
     </div>
   );
 }

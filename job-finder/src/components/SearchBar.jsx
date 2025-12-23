@@ -1,21 +1,23 @@
 function SearchBar() {
-    return (
-        <div style={{ display: "flex", gap: "10px", margin: "20px 0"}}>
-            <input
-            type="text"
-            placeholder="Job title (React, Frontend...)"
-            style={{ flex: 1, padding: "10px"}}
-            />
-            <input
-            type="text"
-            placeholder="Location"
-            style={{ flex: 1, padding: "10px"}}
-            />
-            <button style={{ padding: "10px 20px", cursor: "pointer"}}>
-                Search
-            </button>
-        </div>
-    );
+  return (
+    <div className="flex flex-col md:flex-row gap-4 mb-8">
+      <input
+        type="text"
+        placeholder="Job title (React, Frontend...)"
+        className="flex-1 px-4 py-2 rounded-md text-black outline-none"
+      />
+
+      <input
+        type="text"
+        placeholder="Location"
+        className="flex-1 px-4 py-2 rounded-md text-black outline-none"
+      />
+
+      <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-md font-semibold">
+        Search
+      </button>
+    </div>
+  );
 }
 
 export default SearchBar;
