@@ -1,16 +1,21 @@
 import JobCard from "./JobCard";
 
-const jobs = [
-  { id: 1, title: "Frontend Developer", company: "Google", location: "Remote" },
-  { id: 2, title: "React Intern", company: "Microsoft", location: "India" },
-  { id: 3, title: "Full Stack Developer", company: "Startup XYZ", location: "Pune" },
-];
+function JobList({ jobs }) {
+  if (!jobs || jobs.length === 0) {
+    return <p className="text-gray-400">No jobs found.</p>;
+  }
 
-function JobList() {
   return (
     <div>
       {jobs.map((job) => (
-        <JobCard key={job.id} job={job} />
+        <JobCard
+          key={job.job_id}
+          job={{
+            title: job.job_title,
+            company: job.employer_name,
+            location: job.job_city || "Remote",
+          }}
+        />
       ))}
     </div>
   );
