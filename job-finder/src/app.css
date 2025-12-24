@@ -15,3 +15,90 @@
   color: blue;
   font-weight: bold;
 }
+
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+  font-family: Arial, sans-serif;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.job-list {
+  display: grid;
+  gap: 16px;
+}
+
+.job-card {
+  background: #020617;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+}
+
+.job-card h2 {
+  margin-bottom: 6px;
+}
+
+.company {
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.type {
+  display: inline-block;
+  background: #1d4ed8;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.apply-btn {
+  display: inline-block;
+  margin-top: 10px;
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+.loader {
+  margin: 20px 0;
+}
+
+.container {
+  max-width: 900px;        
+  margin: 0 auto;          
+  padding: 30px 20px;      
+}
+
+.loader {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.page-center {
+  min-height: 100vh;       
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+
+.page-center {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+}
+
+.container {
+  margin-top: 60px;
+}
+
+

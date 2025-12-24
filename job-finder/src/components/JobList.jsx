@@ -1,14 +1,24 @@
 const JobList = ({ jobs }) => {
-  if (!jobs.length) return <p>No jobs found.</p>;
+  if (!jobs.length) return <p className="empty">No jobs found.</p>;
 
   return (
     <div className="job-list">
       {jobs.map((job) => (
         <div key={job.id} className="job-card">
-          <h3>{job.title}</h3>
-          <p>{job.company_name}</p>
-          <p>{job.job_type}</p>
-          <a href={job.url} target="_blank">Apply</a>
+          <h2>{job.title}</h2>
+          <p className="company">{job.company_name}</p>
+          <span className="type">
+            {job.job_type.replace("_", " ").toUpperCase()}
+          </span>
+
+          <a
+            href={job.url}
+            target="_blank"
+            rel="noreferrer"
+            className="apply-btn"
+          >
+            Apply Now
+          </a>
         </div>
       ))}
     </div>
