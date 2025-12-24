@@ -1,0 +1,17 @@
+.search-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.job-card {
+  padding: 16px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.job-card a {
+  color: blue;
+  font-weight: bold;
+}

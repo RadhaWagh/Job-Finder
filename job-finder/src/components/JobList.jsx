@@ -1,24 +1,18 @@
-import JobCard from "./JobCard";
-
-function JobList({ jobs }) {
-  if (!jobs || jobs.length === 0) {
-    return <p className="text-gray-400">No jobs found.</p>;
-  }
+const JobList = ({ jobs }) => {
+  if (!jobs.length) return <p>No jobs found.</p>;
 
   return (
-    <div>
+    <div className="job-list">
       {jobs.map((job) => (
-        <JobCard
-          key={job.job_id}
-          job={{
-            title: job.job_title,
-            company: job.employer_name,
-            location: job.job_city || "Remote",
-          }}
-        />
+        <div key={job.id} className="job-card">
+          <h3>{job.title}</h3>
+          <p>{job.company_name}</p>
+          <p>{job.job_type}</p>
+          <a href={job.url} target="_blank">Apply</a>
+        </div>
       ))}
     </div>
   );
-}
+};
 
 export default JobList;
